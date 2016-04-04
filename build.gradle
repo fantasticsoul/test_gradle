@@ -1,0 +1,22 @@
+
+apply plugin : "java"
+
+buildscript {
+
+}
+
+task sayHello << {
+	info = "this is a gradle script"
+	println info
+}
+
+jar {
+	manifest {
+		attributes 'Main-Class' : 'Main'
+		attributes 'Class-Path' : '/opt/develop/vinci/test_gradle/build/libs/'
+	}
+}
+
+sayHello
+
+
